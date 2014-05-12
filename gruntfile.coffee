@@ -54,6 +54,17 @@ module.exports = (grunt) ->
           ext: '.css'
         ]
 
+    # autoprefixer
+    autoprefixer:
+      all:
+        files: [
+          expand: true
+          cwd: '<%= paths.src.css %>'
+          src: ['*.css']
+          dest: '<%= paths.src.css %>'
+          ext: '.css'
+        ]
+
     # imageEmbed
     imageEmbed:
       options:
@@ -90,7 +101,7 @@ module.exports = (grunt) ->
       # watch sass
       sass:
         files: ['<%= paths.src.sass %>*.sass']
-        tasks: ['newer:sass', 'newer:cssmin']
+        tasks: ['newer:sass', 'newer:autoprefixer', 'newer:imageEmbed', 'newer:cssmin']
         options:
           livereload: true
 
