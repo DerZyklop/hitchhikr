@@ -27,6 +27,8 @@ The UI will be bild with one of these Frameworks:
 - AngularJS
 - Backbone.js
 
+We should evaluate if [hood.ie](www.hood.ie) is fitting in our plans.
+
 ### Backend
 
 tba.
