@@ -105,6 +105,23 @@ module.exports = (grunt) ->
         options:
           livereload: true
 
+      # watch templates
+      templates:
+        files: ['<%= paths.src.dir %>*.{html,php}']
+        tasks: ['newer:copy']
+        options:
+          livereload: true
+
+    # copy
+    copy:
+      all:
+        files: [
+          expand: true
+          cwd: '<%= paths.src.dir %>'
+          src: ['*.{html,php}']
+          dest: '<%= paths.build.dir %>'
+        ]
+
     # php
     php:
       all:
