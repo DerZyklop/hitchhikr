@@ -24,6 +24,12 @@ module.exports = (grunt) ->
           ext: '.js'
         ]
 
+    # eslint
+    eslint:
+      options:
+        config: 'eslint.json'
+      all: ['<%= paths.src.js %>*.js']
+
     # uglify
     uglify:
       options:
@@ -42,7 +48,7 @@ module.exports = (grunt) ->
       # watch coffee
       coffee:
         files: ['<%= paths.src.coffee %>*.coffee']
-        tasks: ['coffee', 'uglify']
+        tasks: ['coffee', 'eslint', 'uglify']
         options:
           livereload: true
 
