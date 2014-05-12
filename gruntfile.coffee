@@ -105,5 +105,16 @@ module.exports = (grunt) ->
         options:
           livereload: true
 
-  # Default task(s).
+    # php
+    php:
+      all:
+        options:
+          port: 1337
+          hostname: 'localhost'
+          base: '<%= paths.build.dir %>'
+          keepalive: true
+          open: true
+
+  # Default task(s)
   grunt.registerTask('default', ['watch'])
+  grunt.registerTask('server', ['php'])
