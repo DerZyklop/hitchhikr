@@ -54,6 +54,18 @@ module.exports = (grunt) ->
           ext: '.css'
         ]
 
+    # imageEmbed
+    imageEmbed:
+      options:
+        deleteAfterEncoding : false
+      all:
+        files: [
+          expand: true
+          cwd: '<%= paths.src.css %>'
+          src: ['*.css']
+          dest: '<%= paths.src.css %>'
+        ]
+
     # cssmin
     cssmin:
       options:
@@ -66,19 +78,19 @@ module.exports = (grunt) ->
           dest: '<%= paths.build.css %>'
           ext: '.min.css'
         ]
+
     # watch
     watch:
       # watch coffee
       coffee:
         files: ['<%= paths.src.coffee %>*.coffee']
-        tasks: ['coffee', 'eslint', 'uglify']
+        tasks: ['newer:coffee', 'newer:eslint', 'newer:uglify']
         options:
           livereload: true
-
       # watch sass
       sass:
         files: ['<%= paths.src.sass %>*.sass']
-        tasks: ['sass', 'cssmin']
+        tasks: ['newer:sass', 'newer:cssmin']
         options:
           livereload: true
 
