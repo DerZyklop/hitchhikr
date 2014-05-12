@@ -9,6 +9,6 @@
   "build": {
     "dir":      "build/",
     "js":       "<%= paths.build.dir %>js/",
-    "css":      "<%= paths.src.dir %>css/"
+    "css":      "<%= paths.build.dir %>css/"
   }
 }

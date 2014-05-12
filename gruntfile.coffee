@@ -43,12 +43,42 @@ module.exports = (grunt) ->
           ext: '.min.js'
         ]
 
+    # sass
+    sass:
+      all:
+        files: [
+          expand: true
+          cwd: '<%= paths.src.sass %>'
+          src: ['*.sass']
+          dest: '<%= paths.src.css %>'
+          ext: '.css'
+        ]
+
+    # cssmin
+    cssmin:
+      options:
+        banner: '<%= banner %>'
+      all:
+        files: [
+          expand: true
+          cwd: '<%= paths.src.css %>'
+          src: ['*.css']
+          dest: '<%= paths.build.css %>'
+          ext: '.min.css'
+        ]
     # watch
     watch:
       # watch coffee
       coffee:
         files: ['<%= paths.src.coffee %>*.coffee']
         tasks: ['coffee', 'eslint', 'uglify']
+        options:
+          livereload: true
+
+      # watch sass
+      sass:
+        files: ['<%= paths.src.sass %>*.sass']
+        tasks: ['sass', 'cssmin']
         options:
           livereload: true
 
