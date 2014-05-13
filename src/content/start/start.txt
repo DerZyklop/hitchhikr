@@ -1,0 +1,3 @@
+Title: Inside
+----
+Text: We've send you an email with your personal url.
