@@ -1,14 +1,15 @@
 {
+  "assets":     "assets/",
   "src": {
     "dir":      "src/",
-    "coffee":   "<%= paths.src.dir %>coffee/",
-    "js":       "<%= paths.src.dir %>js/",
-    "sass":     "<%= paths.src.dir %>sass/",
-    "css":      "<%= paths.src.dir %>css/"
+    "coffee":   "<%= paths.src.dir %><%= paths.assets %>coffee/",
+    "js":       "<%= paths.src.dir %><%= paths.assets %>js/",
+    "sass":     "<%= paths.src.dir %><%= paths.assets %>sass/",
+    "css":      "<%= paths.src.dir %><%= paths.assets %>css/"
   },
   "build": {
     "dir":      "build/",
-    "js":       "<%= paths.build.dir %>js/",
-    "css":      "<%= paths.build.dir %>css/"
+    "js":       "<%= paths.build.dir %><%= paths.assets %>js/",
+    "css":      "<%= paths.build.dir %><%= paths.assets %>css/"
   }
 }

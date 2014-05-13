@@ -107,7 +107,10 @@ module.exports = (grunt) ->
 
       # watch templates
       templates:
-        files: ['<%= paths.src.dir %>*.{html,php}']
+        files: [
+          '<%= paths.src.dir %>*'
+          '<%= paths.src.dir %>site/**/*'
+        ]
         tasks: ['newer:copy']
         options:
           livereload: true
@@ -118,7 +121,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: '<%= paths.src.dir %>'
-          src: ['*.{html,php}']
+          src: ['**/*','!<%= paths.assets %>**','!submodules/**']
           dest: '<%= paths.build.dir %>'
         ]
 
@@ -132,6 +135,15 @@ module.exports = (grunt) ->
           keepalive: true
           open: true
 
+
+    # concurrent
+    concurrent:
+      all:
+        tasks: ['php','watch']
+      options:
+        logConcurrentOutput: true
+
   # Default task(s)
-  grunt.registerTask('default', ['watch'])
-  grunt.registerTask('server', ['php'])
+  grunt.registerTask('scripts', ['coffee', 'eslint', 'uglify'])
+  grunt.registerTask('styles', ['sass', 'autoprefixer', 'imageEmbed', 'cssmin'])
+  grunt.registerTask('default', ['copy', 'scripts', 'styles', 'concurrent'])
