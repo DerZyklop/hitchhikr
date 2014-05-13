@@ -115,6 +115,15 @@ module.exports = (grunt) ->
         options:
           livereload: true
 
+      # watch content
+      content:
+        files: [
+          '<%= paths.src.dir %>content/**/*'
+        ]
+        tasks: ['newer:copy']
+        options:
+          livereload: true
+
     # copy
     copy:
       all:
