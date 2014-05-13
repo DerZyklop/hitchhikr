@@ -10,8 +10,8 @@
   <?php
 
   echo css(array(
-    'http://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,600,400italic',
-    'assets/css/main.css',
+    'http://fonts.googleapis.com/css?family=Merriweather:400,700',
+    'assets/css/styles.min.css',
   ));
 
   ?>
