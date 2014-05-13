@@ -41,3 +41,33 @@ form
     right: 0.5em
     background: url('../images/iconmonstr-crosshair-9-icon-32.png') center center no-repeat
     width: 32px
+
+$timeline-line-width: 2px
+$timeline-size: 12px
+
+ul.trip-stream
+  display: block
+  padding: 0
+  margin: 0
+  list-style: none
+  li
+    border-left: $timeline-line-width solid $border-color
+    padding-top: 0
+    padding-bottom: 3em
+    padding-left: $timeline-size * 2
+    margin-left: $timeline-size
+    position: relative
+    &:before
+      border: $timeline-line-width solid $secondary
+      background: $secondary
+      border-radius: 50%
+      content: ""
+      display: block
+      position: absolute
+      left: -(($timeline-line-width / 2) + ($timeline-size))
+      width: $timeline-size * 2
+      height: $timeline-size * 2
+      @include box-sizing(border-box)
+    &:last-child
+      border-left: none
+      margin-left: $timeline-size + $timeline-line-width
