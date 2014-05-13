@@ -6,7 +6,7 @@ Wanna know more? Read the [concept](docs/CONCEPT.md).
 
 ## Getting started
 
-Download repo and install dev environment
+Download repo and install dev environment:
 
 ```
 git clone --recursive https://github.com/DerZyklop/hitchhikr.git
@@ -14,7 +14,7 @@ cd hitchhikr
 npm install
 ```
 
-Start server and watch files
+Start server and watch files:
 
 ```
 grunt
