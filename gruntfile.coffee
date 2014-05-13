@@ -121,7 +121,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: '<%= paths.src.dir %>'
-          src: ['**/*','!<%= paths.assets %>**','!submodules/**']
+          src: ['**/*','!<%= paths.assets %>**']
           dest: '<%= paths.build.dir %>'
         ]
 
