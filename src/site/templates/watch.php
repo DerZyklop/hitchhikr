@@ -8,19 +8,19 @@
 
     <ul class="trip-stream">
       <li>
-        Mannheim
+        09:46 – Mannheim
       </li>
       <li>
-        Grüner Volvo / Fahrer: Weiblich
+        09:53 – Grüner Volvo / Fahrer: Weiblich
       </li>
       <li>
-        Darmstadt
+        11:24 – Darmstadt
       </li>
       <li>
-        Blauer Opel / Fahrer: Männlich ca. 40
+        11:41 – Blauer Opel / Fahrer: Männlich ca. 40
       </li>
       <li class="unknown">
-        Grüner Audi / Fahrer: Weiblich ca. 25
+        12:11 – Grüner Audi / Fahrer: Weiblich ca. 25
       </li>
       <li class="todo">
         Gießen
