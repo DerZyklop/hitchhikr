@@ -1,0 +1,3 @@
+[submodule "submodules/kirby"]
+  path = submodules/kirby
+  url = https://github.com/getkirby/kirby.git
