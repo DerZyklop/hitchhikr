@@ -1,7 +1,7 @@
 <?php snippet('header') ?>
 
   <main class="content" role="main">
-    <h1><?php echo html($page->title()) ?></h1>
+    <h5><?php # echo html($page->title()) ?></h5>
     <?php echo kirbytext($page->text()) ?>
 
 
@@ -19,10 +19,10 @@
       <li>
         Blauer Opel / Fahrer: Männlich ca. 40
       </li>
-      <li>
+      <li class="unknown">
         Grüner Audi / Fahrer: Weiblich ca. 25
       </li>
-      <li>
+      <li class="todo">
         Gießen
       </li>
     </ul>
@@ -31,4 +31,4 @@
 
   </main>
 
-<?php snippet('footer') ?>
+<?php #snippet('footer') ?>
