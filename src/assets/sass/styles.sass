@@ -1,2 +1,43 @@
-html
-  font-family: 'merriweather'
+@import 'config'
+@import '../../../submodules/sass-boilerplate/mixins/all'
++all
+
+// html
+body
+  font-family: $font-main
+  font-size: $font-size
+
+h1
+  border-bottom: 1px solid $border-color
+
+input
+  [type="text"]
+    width: 100%
+
+footer
+  border-top: 1px solid $border-color
+
+form
+  img
+    display: block
+    margin: 0 auto
+
+// snippets
+.progress-bar
+  position: relative
+  background: $border-color
+  text-align: center
+  line-height: 50px
+  .done,
+  .target-icon
+    position: absolute
+    top: 0
+    bottom: 0
+  .done
+    left: 0
+    background: $secondary
+    width: 20%
+  .target-icon
+    right: 0.5em
+    background: url('../images/iconmonstr-crosshair-9-icon-32.png') center center no-repeat
+    width: 32px

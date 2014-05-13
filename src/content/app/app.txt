@@ -1,0 +1,6 @@
+Title: Hitchhikr-App
+----
+Text:
+    <p>
+      <a class="button" href="/app/addtrip">New Trip</a>
+    </p>

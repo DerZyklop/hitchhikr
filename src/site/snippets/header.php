@@ -20,6 +20,6 @@
 <body>
 
   <header class="cf" role="banner">
-    <a class="branding" href="<?php echo url() ?>"><img src="<?php echo url('assets/images/logo.png') ?>" width="115" height="41" alt="<?php echo html($site->title()) ?>" /></a>
-    <?php snippet('menu') ?>
+    <a class="branding" href="<?php echo url() ?>"><?php echo html($site->title()) ?></a>
+    <?php #snippet('menu') ?>
   </header>
