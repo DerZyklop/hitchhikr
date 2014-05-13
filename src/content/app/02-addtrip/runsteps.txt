@@ -1,0 +1,3 @@
+Title: Add a new Trip
+----
+Text:

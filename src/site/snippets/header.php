@@ -20,6 +20,5 @@
 <body>
 
   <header class="cf" role="banner">
-    <a class="branding" href="<?php echo url() ?>"><?php echo html($site->title()) ?></a>
     <?php #snippet('menu') ?>
   </header>

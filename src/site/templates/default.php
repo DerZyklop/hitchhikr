@@ -1,5 +1,7 @@
 <?php snippet('header') ?>
 
+  <?php snippet('menu') ?>
+
   <main class="content" role="main">
     <h1><?php echo html($page->title()) ?></h1>
     <?php echo kirbytext($page->text()) ?>

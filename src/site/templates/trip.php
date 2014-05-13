@@ -1,4 +1,5 @@
 <?php snippet('header') ?>
+  <?php snippet('menu') ?>
 
   <main class="content" role="main">
     <?php snippet('progress-bar') ?>
