@@ -45,6 +45,8 @@ module.exports = (grunt) ->
 
     # sass
     sass:
+      options:
+        compass: true
       all:
         files: [
           expand: true
@@ -130,7 +132,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: '<%= paths.src.dir %>'
-          src: ['**/*','!<%= paths.assets %>**']
+          src: ['**/*','!<%= paths.assets %>**','<%= paths.assets %>images/**/*']
           dest: '<%= paths.build.dir %>'
         ]
 
