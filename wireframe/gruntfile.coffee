@@ -155,13 +155,20 @@ module.exports = (grunt) ->
           keepalive: true
           open: true
 
-
     # concurrent
     concurrent:
       all:
-        tasks: ['php','watch']
+        tasks: ['php','watch','notify']
       options:
         logConcurrentOutput: true
+
+    # notify
+    notify:
+      server:
+        options:
+          title: 'Yo'
+          message: 'Server läuft auf <%= php.all.options.hostname %>:<%= php.all.options.port %>'
+
 
   # Default task(s)
   grunt.registerTask('scripts', ['coffee', 'eslint', 'concat', 'uglify'])
