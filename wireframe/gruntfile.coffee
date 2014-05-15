@@ -24,6 +24,15 @@ module.exports = (grunt) ->
           ext: '.js'
         ]
 
+    # concat
+    concat:
+      all:
+        src: [
+          'bower_components/jquery/dist/jquery.min.js'
+          '<%= paths.src.js %>*.js'
+        ]
+        dest: '<%= paths.src.js %>script.js'
+
     # eslint
     eslint:
       options:
@@ -38,7 +47,7 @@ module.exports = (grunt) ->
         files: [
           expand: true
           cwd: '<%= paths.src.js %>'
-          src: ['*.js']
+          src: ['script.js']
           dest: '<%= paths.build.js %>'
           ext: '.min.js'
         ]
@@ -97,7 +106,7 @@ module.exports = (grunt) ->
       # watch coffee
       coffee:
         files: ['<%= paths.src.coffee %>*.coffee']
-        tasks: ['newer:coffee', 'newer:eslint', 'newer:uglify']
+        tasks: ['newer:coffee', 'newer:eslint', 'concat', 'newer:uglify']
         options:
           livereload: true
       # watch sass
@@ -155,6 +164,6 @@ module.exports = (grunt) ->
         logConcurrentOutput: true
 
   # Default task(s)
-  grunt.registerTask('scripts', ['coffee', 'eslint', 'uglify'])
+  grunt.registerTask('scripts', ['coffee', 'eslint', 'concat', 'uglify'])
   grunt.registerTask('styles', ['sass', 'autoprefixer', 'imageEmbed', 'cssmin'])
   grunt.registerTask('default', ['copy', 'scripts', 'styles', 'concurrent'])

@@ -235,8 +235,11 @@ form img {
 
 .progress-bar {
   position: relative;
+  display: block;
   background: #cccccc;
   text-align: center;
+  text-decoration: none;
+  color: #fcfcfc;
   line-height: 50px; }
   .progress-bar .done,
   .progress-bar .target-icon {
