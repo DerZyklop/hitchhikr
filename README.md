@@ -24,13 +24,12 @@ Download repo and install dev environment:
 
 ```
 git clone --recursive https://github.com/DerZyklop/hitchhikr.git
-cd hitchhikr
 ```
 
 Get the wireframe running:
 
 ```
-cd wireframe/
+cd hitchhikr/wireframe/
 npm install
 grunt
 ```
