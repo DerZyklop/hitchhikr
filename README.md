@@ -4,6 +4,19 @@ This is the place where [@mssimor](https://twitter.com/mssimor) and [@DerZyklop]
 
 Wanna know more? Read the [concept](docs/CONCEPT.md).
 
+## Requirements
+
+```
+# Ruby
+sudo gem install ruby
+# Sass
+sudo gem install sass
+# Compass
+sudo gem install compass
+# Grunt CLI
+npm install -g grunt-cli
+```
+
 ## Getting started
 
 Download repo and install dev environment:
