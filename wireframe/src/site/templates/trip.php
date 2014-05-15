@@ -2,7 +2,14 @@
   <?php snippet('menu') ?>
 
   <main class="content" role="main">
-    <?php snippet('progress-bar') ?>
+    <div class="collapsable">
+      <div class="collapsable-target">
+        <?php snippet('trip-stream') ?>
+      </div>
+      <div class="collapsable-trigger">
+        <?php snippet('progress-bar') ?>
+      </div>
+    </div>
     <h1><?php echo html($page->title()) ?></h1>
     <?php echo kirbytext($page->text()) ?>
     <p>
