@@ -7,7 +7,7 @@ Problems to solve:
 1. As a hitchhiker in a foreign city, i dont know good places to start my journey.
 2. Friends and family are worried about those hitchhiking friends.
 
-Solutions: 
+Solutions:
 
 1. Good access to Hitchwiki Maps database for mobile devices
 2. Possibility to log Hitchhikers activities easily (where they are, which car etc.). Make activities accessable to friends and family.
@@ -42,3 +42,5 @@ This could help during the developement:
 ## More
 
 Do you have more ideas about it? [Let us know](https://github.com/DerZyklop/hitchhikr/issues?state=open)! You're welcome to contibute!
+
+Yo!
