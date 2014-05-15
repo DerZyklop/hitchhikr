@@ -4,7 +4,17 @@ This is the place where [@mssimor](https://twitter.com/mssimor) and [@DerZyklop]
 
 Wanna know more? Read the [concept](docs/CONCEPT.md).
 
-## Requirements
+## Getting started
+
+Download repo and install dev environment:
+
+```
+git clone --recursive https://github.com/DerZyklop/hitchhikr.git
+```
+
+## Wireframe
+
+### Requirements
 
 ```
 # Ruby
@@ -18,15 +28,7 @@ sudo gem install compass --version 0.12.4
 npm install -g grunt-cli
 ```
 
-## Getting started
-
-Download repo and install dev environment:
-
-```
-git clone --recursive https://github.com/DerZyklop/hitchhikr.git
-```
-
-Get the wireframe running:
+### Get it running
 
 ```
 cd hitchhikr/wireframe/
