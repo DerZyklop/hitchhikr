@@ -14,10 +14,15 @@ sudo gem install compass --version 0.12.4
 npm install -g grunt-cli
 ```
 
-## Get it running
+## Install dev environment
 
 ```
 cd hitchhikr/wireframe/
 npm install
+```
+
+## Run server & watch
+
+```
 grunt
 ```
