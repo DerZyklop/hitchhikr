@@ -11,3 +11,5 @@ Download repo recursively
 ```
 git clone --recursive https://github.com/DerZyklop/hitchhikr.git
 ```
+
+Check the [wireframe](wireframe/).
