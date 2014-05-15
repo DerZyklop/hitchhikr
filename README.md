@@ -6,15 +6,15 @@ Wanna know more? Read the [concept](docs/CONCEPT.md).
 
 ## Getting started
 
-Download repo and install dev environment:
+Download repo recursively
 
 ```
 git clone --recursive https://github.com/DerZyklop/hitchhikr.git
 ```
 
-## Wireframe
+### Wireframe
 
-### Requirements
+#### Requirements
 
 ```
 # Ruby
@@ -28,7 +28,7 @@ sudo gem install compass --version 0.12.4
 npm install -g grunt-cli
 ```
 
-### Get it running
+#### Get it running
 
 ```
 cd hitchhikr/wireframe/
