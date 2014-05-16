@@ -49,7 +49,6 @@ $timeline-size: 12px
 
 body
   background-image: url('../images/grid_noise.png')
-  background-image: +background-gradient(#000, #fff)
   background-attachment: fixed
 
 ul.trip-stream
@@ -76,7 +75,7 @@ ul.trip-stream
       left: -(($border-width / 2) + ($timeline-size))
       width: $timeline-size * 2
       height: $timeline-size * 2
-      @include box-sizing(border-box)
+      box-sizing: border-box
     &.todo:before
       background: $quadrary
     &:last-child

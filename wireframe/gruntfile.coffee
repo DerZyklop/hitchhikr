@@ -54,8 +54,6 @@ module.exports = (grunt) ->
 
     # sass
     sass:
-      options:
-        compass: true
       all:
         files: [
           expand: true
