@@ -1,6 +1,7 @@
 "use strict"
-### global $ ###
+### global $, console ###
 
 $(".collapsable-target").hide()
-$(".collapsable > .collapsable-trigger").on "click", ->
-  $(".collapsable-target").show()
+$(".collapsable > .collapsable-trigger").on "click", (e) ->
+  e.preventDefault()
+  $(".collapsable-target").slideToggle()

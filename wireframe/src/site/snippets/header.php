@@ -11,11 +11,10 @@
 
   echo css(array(
     'http://fonts.googleapis.com/css?family=Merriweather:400,700',
-    'assets/css/styles.min.css',
+    'assets/css/styles.min.css'
   ));
 
   ?>
-
 </head>
 <body>
 
