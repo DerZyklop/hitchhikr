@@ -2,6 +2,7 @@ module.exports = (grunt) ->
 
   # Get all grunt modules
   require('matchdep').filterDev('grunt-*').forEach(grunt.loadNpmTasks)
+  require('time-grunt')(grunt)
 
   # Project configuration.
   grunt.initConfig
@@ -171,4 +172,4 @@ module.exports = (grunt) ->
   # Default task(s)
   grunt.registerTask('scripts', ['coffee', 'eslint', 'concat', 'uglify'])
   grunt.registerTask('styles', ['sass', 'autoprefixer', 'imageEmbed', 'cssmin'])
-  grunt.registerTask('default', ['copy', 'scripts', 'styles', 'concurrent'])
+  grunt.registerTask('default', ['scripts', 'styles', 'concurrent'])
