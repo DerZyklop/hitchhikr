@@ -224,7 +224,10 @@ input [type="text"] {
   width: 100%; }
 
 footer {
-  border-top: 1px solid #cccccc; }
+  border-top: 1px solid #cccccc;
+  font-family: helvetica, arial;
+  font-size: 0.8em;
+  text-align: right; }
 
 form img {
   display: block;

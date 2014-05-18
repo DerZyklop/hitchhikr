@@ -1,20 +1,12 @@
-<ul class="trip-stream">
-  <li>
-    09:46 – Mannheim
-  </li>
-  <li>
-    09:53 – Grüner Volvo / Fahrer: Weiblich
-  </li>
-  <li>
-    11:24 – Darmstadt
-  </li>
-  <li>
-    11:41 – Blauer Opel / Fahrer: Männlich ca. 40
-  </li>
-  <li class="unknown">
-    12:11 – Grüner Audi / Fahrer: Weiblich ca. 25
-  </li>
-  <li class="todo">
-    Gießen
-  </li>
-</ul>
+<div ng-controller="logsStreamCtrl">
+  <h2>{{trip.start}} > {{trip.target}} | {{trip.date}}</h2>
+  <ul class="trip-stream">
+    <li ng-repeat="log in logs">
+      {{log.time}} |
+      <span ng-if="log.location">{{log.location}}</span>
+      <span ng-if="log.color"> in a {{log.color}}-colored car</span>
+      <!-- TODO: this does't work. dont know why -->
+      <span ng-if="log.gender"> with a {{log.gender}}</span>
+    </li>
+  </ul>
+</div>

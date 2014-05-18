@@ -31,6 +31,7 @@ module.exports = (grunt) ->
         src: [
           'bower_components/jquery/dist/jquery.min.js'
           'bower_components/angular/angular.min.js'
+          'bower_components/underscore/underscore.js'
           '<%= paths.src.js %>*.js'
         ]
         dest: '<%= paths.build.js %>script.js'
