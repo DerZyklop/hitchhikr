@@ -16,6 +16,8 @@
     "kirby": "getkirby/kirby"
   },
   "devDependencies": {
-    "grunt-cli": "~0.1.13"
+    "grunt-cli": "~0.1.13",
+    "boilerplate.pxwrk.de": "DerZyklop/boilerplate.pxwrk.de",
+    "underscore": "~1.6.0"
   }
 }

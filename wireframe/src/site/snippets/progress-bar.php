@@ -1,5 +1,5 @@
-<a class="progress-bar" href="<?= url('watch') ?>">
+<a class="progress-bar" href="<?= url('watch') ?>" ng-controller="percentageBarCtrl">
   <div class="done"></div>
-  20%
+  {{percentage}}
   <div class="target-icon"></div>
 </a>
