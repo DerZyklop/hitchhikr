@@ -18,7 +18,7 @@ Solutions:
 
 We will fetch data from [Hitchwiki Maps](http://hitchwiki.org/maps/).
 
-Internal data will mostly be delivered as json. The exchange to and from Hitchhikr-Server will be done via [CRUD-API](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
+And here is a [API blueprint](http://hitchhikr.apiary-mock.com/) for internal data-transfer.
 
 ### Frontend
 
