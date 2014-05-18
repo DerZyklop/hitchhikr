@@ -89,7 +89,7 @@ A single Trip with its logs.
 # Group Logs
 
 ## Logs Collection [/user/{id}/trip/{trip_id}/log]
-### List all Trips [GET]
+### List all Logs [GET]
 + Response 200 (application/json)
 
         [{
@@ -102,7 +102,7 @@ A single Trip with its logs.
           "id": 3, "date": "05.01.2014", "time": "15:49:34", "start": "Berlin", "target": "Gießen"
         }]
 
-### Create a Trip [POST]
+### Create a Log [POST]
 + Request (application/json)
 
         { "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
@@ -112,10 +112,10 @@ A single Trip with its logs.
         { "id": 2, "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
 
 
-## Trip [/user/{user_id}/trip/{trip_id}/log/{log_id}]
+## Log [/user/{user_id}/trip/{trip_id}/log/{log_id}]
 A single Log with details.
 
-### Retrieve a Trip [GET]
+### Retrieve a Log [GET]
 + Response 200 (application/json)
 
     + Header
@@ -135,6 +135,6 @@ A single Log with details.
 
         { "id": 2, "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
 
-### Remove a Trip [DELETE]
+### Remove a Log [DELETE]
 + Response 204
 
