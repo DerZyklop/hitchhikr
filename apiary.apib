@@ -89,27 +89,51 @@ A single Trip with its logs.
 # Group Logs
 
 ## Logs Collection [/user/{id}/trip/{trip_id}/log]
-### List all Trips [GET]
+### List all Logs [GET]
 + Response 200 (application/json)
 
         [{
-          "id": 0, "date": "01.01.2014", "time": "11:40:10", "start": "Gießen", "target": "Berlin"
+          "id": 0, 
+          "date": "21.01.2014", 
+          "time": "11:40:10", 
+          "type": "car", 
+          "location": "Gießen", 
+          "color": "#ff0000", 
+          "gender": "f" 
         }, {
-          "id": 1, "date": "05.01.2014", "time": "12:24:52", "start": "Berlin", "target": "Gießen"
+          "id": 1, 
+          "date": "21.01.2014", 
+          "time": "11:40:10", 
+          "type": "location", 
+          "location": "Frankfurt am Main", 
+          "color": "", 
+          "gender": "" 
         }, {
-          "id": 2, "date": "01.01.2014", "time": "13:54:53", "start": "Gießen", "target": "Berlin"
+          "id": 2, 
+          "date": "21.01.2014", 
+          "time": "11:40:10", 
+          "type": "car", 
+          "location": "Darmstadt", 
+          "color": "", 
+          "gender": ""
         }, {
-          "id": 3, "date": "05.01.2014", "time": "15:49:34", "start": "Berlin", "target": "Gießen"
+          "id": 3, 
+          "date": "21.01.2014", 
+          "time": "11:40:10", 
+          "type": "car", 
+          "location": "Mannheim", 
+          "color": "#ff0000", 
+          "gender": "f" 
         }]
 
-### Create a Trip [POST]
+### Create a Log [POST]
 + Request (application/json)
 
         { "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
 
 + Response 201 (application/json)
 
-        { "id": 2, "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
+        { "id": 4, "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
 
 
 ## Log [/user/{user_id}/trip/{trip_id}/log/{log_id}]
@@ -126,15 +150,6 @@ A single Log with details.
 
             { "id": 2, "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
 
-### Create a Log [POST]
-+ Request (application/json)
-
-        { "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
-
-+ Response 201 (application/json)
-
-        { "id": 2, "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
-
-### Remove a Trip [DELETE]
+### Remove a Log [DELETE]
 + Response 204
 
