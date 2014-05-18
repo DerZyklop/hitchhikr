@@ -1,0 +1,140 @@
+FORMAT: 1A
+
+# Hitchhikr
+This is the internal API for https://github.com/DerZyklop/hitchhikr/
+
+# Group User
+
+## Users Collection [/user]
+### List all Users [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 0, "name": "robert", "email": "foo@foo.de"
+        }, {
+          "id": 1, "name": "DerZyklop", "email": "inyo@gmx.de"
+        }]
+
+### Create a User [POST]
++ Request (application/json)
+
+        { "name": "sheldon", "email": "cooper@tbbt.com" }
+
++ Response 201 (application/json)
+
+        { "id": 2, "name": "sheldon", "email": "cooper@tbbt.com" }
+
+## User [/user/{id}]
+A single User object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the User to perform action with. Has example value.
+
+### Retrieve a User [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "name": "sheldon", "email": "cooper@tbbt.com" }
+
+### Remove a User [DELETE]
++ Response 204
+
+
+
+# Group Trip
+
+## Trips Collection [/user/{id}/trip]
+### List all Trips [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 0, "date": "01.01.2014", "start": "Gießen", "target": "Berlin"
+        }, {
+          "id": 1, "date": "05.01.2014", "start": "Berlin", "target": "Gießen"
+        }]
+
+### Create a Trip [POST]
++ Request (application/json)
+
+        { "date": "21.01.2014", "start": "Gießen", "target": "Mannheim" }
+
++ Response 201 (application/json)
+
+        { "id": 2, "date": "21.01.2014", "start": "Gießen", "target": "Mannheim" }
+
+
+## Trip [/user/{user_id}/trip/{trip_id}]
+A single Trip with its logs.
+
+### Retrieve a Trip [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 1, "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
+
+
+### Remove a Trip [DELETE]
++ Response 204
+
+# Group Logs
+
+## Logs Collection [/user/{id}/trip/{trip_id}/log]
+### List all Trips [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 0, "date": "01.01.2014", "start": "Gießen", "target": "Berlin"
+        }, {
+          "id": 1, "date": "05.01.2014", "start": "Berlin", "target": "Gießen"
+        }, {
+          "id": 2, "date": "01.01.2014", "start": "Gießen", "target": "Berlin"
+        }, {
+          "id": 3, "date": "05.01.2014", "start": "Berlin", "target": "Gießen"
+        }]
+
+### Create a Trip [POST]
++ Request (application/json)
+
+        { "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
+
++ Response 201 (application/json)
+
+        { "id": 2, "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
+
+
+## Trip [/user/{user_id}/trip/{trip_id}/log/{log_id}]
+A single Log with details.
+
+### Retrieve a Trip [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
+
+### Create a Log [POST]
++ Request (application/json)
+
+        { "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
+
++ Response 201 (application/json)
+
+        { "id": 2, "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
+
+### Remove a Trip [DELETE]
++ Response 204
+
