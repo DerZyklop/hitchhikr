@@ -1,5 +1,4 @@
 <?php snippet('header') ?>
-  <?php snippet('menu') ?>
 
   <main class="content" role="main">
     <div class="collapsable">

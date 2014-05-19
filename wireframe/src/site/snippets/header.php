@@ -18,6 +18,17 @@
 </head>
 <body>
 
-  <header class="cf" role="banner">
-    <?php #snippet('menu') ?>
-  </header>
+  <?php snippet('menu') ?>
+
+  <div class="page-wrap">
+    <header class="main-header" role="banner">
+      <a href="#main-nav" class="open-menu">
+        ☰
+      </a>
+      <a href="#" class="close-menu">
+        ☰
+      </a>
+      Hi!
+    </header>
+    <div class="main-content">
+

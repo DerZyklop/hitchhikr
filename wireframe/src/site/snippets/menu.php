@@ -1,4 +1,4 @@
-<nav role="navigation">
+<nav role="navigation" class="main-nav" id="main-nav">
 
   <ul class="menu cf">
     <?php foreach($site->find('app')->children()->visible() as $p): ?>
