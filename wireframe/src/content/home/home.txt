@@ -4,4 +4,7 @@ Title: Start
 
 Text: Welcome!
 
-Please (link: login text: login).
+This is our beautiful Welcome! page with some info's about app-features. ...later.
+
+Now (link: login text: get startet without a account).
+Or (link: login text: login).
