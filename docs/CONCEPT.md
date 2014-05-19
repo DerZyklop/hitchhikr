@@ -12,6 +12,10 @@ Solutions:
 1. Good access to Hitchwiki Maps database for mobile devices
 2. Possibility to log Hitchhikers activities easily (where they are, which car etc.). Make activities accessable to friends and family.
 
+### Freemium
+
+Some of the features should be accessable without a login/account. E.g. searching for nearby hitchhiker spots.
+
 ## Tools
 
 ### API's
