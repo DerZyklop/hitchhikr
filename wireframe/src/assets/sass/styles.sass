@@ -102,6 +102,9 @@ $main-header-height: 60px
 $main-nav-percentage: 40
 
 #main-nav
+  // TODO: Needs a better solution for min-width here
+  ul
+    min-width: 200px
   &:target
     width: percentage($main-nav-percentage/100)
   &:target + .page-wrap

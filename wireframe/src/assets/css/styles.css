@@ -312,6 +312,8 @@ form img {
 .open-menu {
   display: block; }
 
+#main-nav ul {
+  min-width: 200px; }
 #main-nav:target {
   width: 40%; }
 #main-nav:target + .page-wrap {
