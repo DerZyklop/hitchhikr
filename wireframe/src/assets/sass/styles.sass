@@ -140,11 +140,12 @@ $main-nav-percentage: 40
 .progress-bar
   position: relative
   display: block
-  background: $border-color
+  background: repeating-linear-gradient( 45deg, $tertiary, $tertiary 10px, $tertiary - #111 10px, $tertiary - #111 20px )
   text-align: center
   text-decoration: none
   color: $quadrary
   line-height: 50px
+  border-radius: $radius
   .done,
   .target-icon
     position: absolute
@@ -152,11 +153,10 @@ $main-nav-percentage: 40
     bottom: 0
   .done
     left: 0
-    background: $secondary
-    width: 20%
+    background: repeating-linear-gradient( 45deg, $secondary, $secondary 10px, $secondary - #111 10px, $secondary - #111 20px )
   .target-icon
     right: 0.5em
-    background: url('../images/iconmonstr-crosshair-9-icon-32.png') center center no-repeat
+    background: url('../images/iconmonstr-crosshair-9-icon-32-w.png') center center no-repeat
     width: 32px
 
 $timeline-size: 12px

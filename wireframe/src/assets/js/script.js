@@ -10,9 +10,10 @@
   });
 
   angular.module('Hitchhikr', []).controller('percentageBarCtrl', function($scope, $http) {
+    $scope.percentage = '';
     return $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1/log').then(function(response) {
       console.log(response);
-      return $scope.percentage = '24';
+      return $scope.percentage = '24%';
     });
   }).controller('logsStreamCtrl', function($scope, $http) {
     $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1/log').then(function(response) {
