@@ -1,15 +1,15 @@
 <?php snippet('header') ?>
 
   <main class="content" role="main">
+    <h1><?php echo html($page->title()) ?></h1>
     <div class="collapsable">
-      <div class="collapsable-target">
-        <?php snippet('trip-stream') ?>
-      </div>
       <div class="collapsable-trigger">
         <?php snippet('progress-bar') ?>
       </div>
+      <div class="collapsable-target">
+        <?php snippet('trip-stream') ?>
+      </div>
     </div>
-    <h1><?php echo html($page->title()) ?></h1>
     <?php echo kirbytext($page->text()) ?>
     <p>
       icon mit karte

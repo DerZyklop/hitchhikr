@@ -28,7 +28,7 @@
       <a href="#" class="close-menu">
         ☰
       </a>
-      Hi!
+      Bon voyage!
     </header>
     <div class="main-content">
 

@@ -16,7 +16,7 @@ body {
   background: #fcfcfc; }
 
 fieldset {
-  padding: 2rem 6rem;
+  padding: 1rem 2rem;
   border-color: #eeeeee;
   border-style: solid;
   border-width: 2px; }
@@ -91,13 +91,13 @@ fieldset {
   margin-right: auto; }
 
 .inner-width-wrap {
-  padding: 2rem 6rem; }
+  padding: 1rem 2rem; }
 
 .main-content img {
   max-width: 100%; }
 
 .page-wrap {
-  padding: 2rem 6rem; }
+  padding: 1rem 2rem; }
 
 input[type="text"],
 input[type="email"],
@@ -224,6 +224,9 @@ body, html {
 h1 {
   border-bottom: 1px solid #cccccc; }
 
+a {
+  color: #00b174; }
+
 input [type="text"] {
   width: 100%; }
 
@@ -240,9 +243,9 @@ form img {
 .main-header {
   position: fixed;
   z-index: 10;
-  background: -webkit-gradient(linear, left top, left bottom, from(#22d396), to(#008f52));
-  background: -webkit-linear-gradient(#22d396, #008f52);
-  background: linear-gradient(#22d396, #008f52);
+  background: -webkit-gradient(linear, left top, left bottom, from(#11c285), to(#00a063));
+  background: -webkit-linear-gradient(#11c285, #00a063);
+  background: linear-gradient(#11c285, #00a063);
   height: 30px;
   padding: 15px;
   line-height: 30px;
@@ -285,6 +288,7 @@ form img {
   transition: width 0.3s ease;
   color: #fcfcfc; }
   .main-nav ul {
+    min-width: 220px;
     padding: 0;
     margin: 0; }
     .main-nav ul li {
@@ -292,9 +296,13 @@ form img {
       font-size: 0.8em; }
       .main-nav ul li a {
         display: block;
-        padding: 20px;
+        padding: 0 2rem;
+        line-height: 60px;
         color: #fcfcfc;
         text-decoration: none; }
+        .main-nav ul li a.close-menu {
+          color: #ff9999;
+          font-size: 2em; }
   .main-nav:after {
     content: "";
     position: absolute;
@@ -312,8 +320,6 @@ form img {
 .open-menu {
   display: block; }
 
-#main-nav ul {
-  min-width: 200px; }
 #main-nav:target {
   width: 40%; }
 #main-nav:target + .page-wrap {
@@ -383,8 +389,12 @@ ul.trip-stream {
       -webkit-box-sizing: border-box;
       -moz-box-sizing: border-box;
       box-sizing: border-box; }
-    ul.trip-stream li.todo:before {
-      background: #fcfcfc; }
     ul.trip-stream li:last-child {
       border-left: none;
       margin-left: 14px; }
+    ul.trip-stream li:last-child:before, ul.trip-stream li.unknown:before {
+      background: #fcfcfc; }
+  ul.trip-stream .log .time {
+    padding: 0 0.5em;
+    font-weight: bold;
+    color: #008f52; }
