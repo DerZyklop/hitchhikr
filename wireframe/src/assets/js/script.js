@@ -11,9 +11,12 @@
 
   angular.module('Hitchhikr', []).controller('percentageBarCtrl', function($scope, $http) {
     $scope.percentage = '';
-    return $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1/log').then(function(response) {
-      console.log(response);
+    return $http({
+      url: 'http://hitchhikr.apiary-mock.com/user/1/trip/1/log'
+    }).success(function(data, status, headers, config) {
       return $scope.percentage = '24%';
+    }).error(function(data, status, headers, config) {
+      return $scope.percentage = 'error';
     });
   }).controller('logsStreamCtrl', function($scope, $http) {
     $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1/log').then(function(response) {

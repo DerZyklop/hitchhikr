@@ -9,14 +9,17 @@ $(".collapsable > .collapsable-trigger").on "click", (e) ->
 angular.module('Hitchhikr', [])
   .controller 'percentageBarCtrl', ($scope, $http) ->
     $scope.percentage = ''
-    $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1/log').then (response) ->
-      # logs = response.data
-      #_.last(logs)
-      # TODO: Calculate the current percentage
-
-      console.log response
-
-      $scope.percentage = '24%'
+    $http( url: 'http://hitchhikr.apiary-mock.com/user/1/trip/1/log' )
+      .success (data, status, headers, config) ->
+        # logs = response.data
+        #_.last(logs)
+        # TODO: Calculate the current percentage
+        $scope.percentage = '24%'
+      .error (data, status, headers, config) ->
+        # logs = response.data
+        #_.last(logs)
+        # TODO: Calculate the current percentage
+        $scope.percentage = 'error'
 
   .controller 'logsStreamCtrl', ($scope, $http) ->
     $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1/log').then (response) ->
