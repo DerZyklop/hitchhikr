@@ -1,9 +1,8 @@
 <?php snippet('header') ?>
 
   <main role="main">
-    <h1><?php echo html($page->title()) ?></h1>
     <?php echo kirbytext($page->text()) ?>
-    <form action="start/">
+    <form action="home/">
       <p>
         <label for="name">Your Name</label><br>
         <input type="text" name="name">

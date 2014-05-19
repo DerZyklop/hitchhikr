@@ -6,14 +6,14 @@
         &#215
       </a>
     </li>
-    <li class="home">
-      <a <?php e($site->isOpen(), ' class="active"') ?> href="<?php echo $site->url() ?>"><?php echo html($site->title()) ?></a>
-    </li>
-    <?php foreach($site->find('app')->children()->visible() as $p): ?>
+    <?php foreach($site->children()->visible() as $p): ?>
     <li>
       <a <?php e($p->isOpen(), ' class="active"') ?> href="<?php echo $p->url() ?>"><?php echo html($p->title()) ?></a>
     </li>
     <?php endforeach ?>
+    <li class="logout">
+      <a href="/">&#215 Logout</a>
+    </li>
   </ul>
 
 </nav>

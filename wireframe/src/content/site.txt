@@ -1,7 +1,7 @@
 Title: Hitchhikr
 ----
-Author: Bastian Allgeier GmbH
+Author: DerZyklop & mssimor
 ----
-Description: This is Kirby's Starterkit.
+Description: This is a tool for hitchhikers.
 ----
 Copyright: Made by (link: http://der-zyklop.de text: DerZyklop) and (link: http://twitter.com/mssimor text: mssimor)

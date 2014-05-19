@@ -1,0 +1,7 @@
+Title: Trips
+----
+Text:
+There is no active trip right now.
+<p>
+  <a class="button" href="/trips/addtrip">Add a new trip</a>
+</p>

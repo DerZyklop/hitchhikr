@@ -253,6 +253,12 @@ form img {
   display: block;
   margin: 0 auto; }
 
+.main-header,
+.page-wrap,
+.main-nav {
+  -webkit-transition: all 0.3s cubic-bezier(1, -0.53, 0.405, 1.425);
+  transition: all 0.3s cubic-bezier(1, -0.53, 0.405, 1.425); }
+
 .main-header {
   position: fixed;
   z-index: 10;
@@ -267,9 +273,13 @@ form img {
   text-shadow: #222222 0px -1px 1px;
   width: 100%;
   left: 0;
-  top: 0;
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease; }
+  top: 0; }
+  .main-header h1 {
+    font-size: 1em;
+    margin: 0;
+    border: 0;
+    overflow: ellipsis;
+    white-space: nowrap; }
   .main-header a {
     text-decoration: none;
     position: absolute;
@@ -286,9 +296,7 @@ form img {
 .page-wrap {
   float: right;
   width: 100%;
-  padding: 0;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease; }
+  padding: 0; }
 
 .main-nav {
   position: fixed;
@@ -297,8 +305,6 @@ form img {
   height: 100%;
   background: #333333;
   overflow-y: auto;
-  -webkit-transition: width 0.3s ease;
-  transition: width 0.3s ease;
   color: #fcfcfc; }
   .main-nav ul {
     min-width: 220px;
@@ -387,8 +393,8 @@ body {
     background: #fcfcfc; }
   .trip-stream ul {
     display: block;
-    padding: 1rem 0;
-    margin: 2rem 0;
+    padding: 1rem 0 0;
+    margin: 2rem 0 0;
     list-style: none; }
     .trip-stream ul li {
       padding-top: 0;
@@ -415,8 +421,8 @@ body {
       .trip-stream ul li:last-child {
         border-left: none;
         margin-left: 14px; }
-      .trip-stream ul li:last-child:before, .trip-stream ul li.unknown:before {
-        background: #fcfcfc; }
+        .trip-stream ul li:last-child:before {
+          background: #fcfcfc; }
     .trip-stream ul .log .time {
       padding: 0 0.5em;
       font-weight: bold;

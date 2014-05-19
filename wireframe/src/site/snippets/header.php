@@ -10,7 +10,7 @@
   <?php
 
   echo css(array(
-    'http://fonts.googleapis.com/css?family=Merriweather:400,700',
+    // 'http://fonts.googleapis.com/css?family=Merriweather:400,700',
     'assets/css/styles.min.css'
   ));
 
@@ -28,7 +28,7 @@
       <a href="#" class="close-menu">
         ☰
       </a>
-      Bon voyage!
+      <h1><?php echo html($page->title()) ?></h1>
     </header>
     <div class="main-content">
 

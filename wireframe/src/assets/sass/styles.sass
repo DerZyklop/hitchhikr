@@ -44,6 +44,11 @@ form
 
 $main-header-height: 60px
 
+.main-header,
+.page-wrap,
+.main-nav
+  transition: all 0.3s cubic-bezier(1.000, -0.530, 0.405, 1.425)
+
 .main-header
   position: fixed
   z-index: 10
@@ -57,7 +62,13 @@ $main-header-height: 60px
   width: 100%
   left: 0
   top: 0
-  transition: all 0.3s ease
+  h1
+    font-size: 1em
+    margin: 0
+    border: 0
+    // TODO: ellipsis is not working
+    overflow: ellipsis
+    white-space: nowrap
   a
     text-decoration: none
     position: absolute
@@ -75,7 +86,6 @@ $main-header-height: 60px
   float: right
   width: 100%
   padding: 0
-  transition: width 0.3s ease
 
 .main-nav
   position: fixed
@@ -84,7 +94,6 @@ $main-header-height: 60px
   height: 100%
   background: $tertiary
   overflow-y: auto
-  transition: width 0.3s ease
   color: $quadrary
   ul
     // TODO: Needs a better solution for min-width here
@@ -124,6 +133,7 @@ $main-nav-percentage: 40
     width: percentage($main-nav-percentage/100)
   &:target + .page-wrap
     width: percentage((100-$main-nav-percentage)/100)
+    //margin-right: -120px
     .open-menu
       display: none
     .close-menu
@@ -175,8 +185,8 @@ body
     background: $quadrary
   ul
     display: block
-    padding: $space-t-b 0
-    margin: $space-l-r 0
+    padding: $space-t-b 0 0
+    margin: $space-l-r 0 0
     list-style: none
     li
       padding-top: 0
@@ -201,8 +211,6 @@ body
       &:last-child
         border-left: none
         margin-left: $timeline-size + $border-width
-      &:last-child,
-      &.unknown
         &:before
           background: $quadrary
     .log
