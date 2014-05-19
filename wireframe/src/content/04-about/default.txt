@@ -1,3 +1,3 @@
-Title: Newarby spots
+Title: About
 ----
-Text: Find good spots for hitchhiking in your area.
+Text: Some more detailed info about this Project.
