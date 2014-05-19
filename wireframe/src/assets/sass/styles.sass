@@ -17,7 +17,16 @@ h1
 a
   color: $secondary
 
+hr
+  border: none
+  background: $tertiary
+  height: $border-width
+h1, h2, h3, h4, h5, h6,
+hr
+  margin: $space-t-b 0
+
 input
+  box-sizing: border-box
   [type="text"]
     width: 100%
 
@@ -156,40 +165,48 @@ body
   background-image: url('../images/grid_noise.png')
   background-attachment: fixed
 
-ul.trip-stream
-  display: block
-  padding: 0
-  margin: 0
-  list-style: none
-  li
-    padding-top: 0
-    padding-bottom: 3em
-    padding-left: $timeline-size * 2
-    margin-left: $timeline-size
-    position: relative
-    border-left: $border-width solid $secondary
-    &.unknown
-      border-left-style: dashed
-    &:before
-      border: $border-width solid $secondary
-      background: $secondary
-      border-radius: 50%
-      content: ""
-      display: block
-      position: absolute
-      left: -(($border-width / 2) + ($timeline-size))
-      width: $timeline-size * 2
-      height: $timeline-size * 2
-      box-sizing: border-box
-    &:last-child
-      border-left: none
-      margin-left: $timeline-size + $border-width
-    &:last-child,
-    &.unknown
+.trip-stream
+  background: $tertiary
+  border-radius: $radius
+  color: $quadrary
+  padding: $space-l-r
+  margin: $space-l-r 0
+  hr
+    background: $quadrary
+  ul
+    display: block
+    padding: $space-t-b 0
+    margin: $space-l-r 0
+    list-style: none
+    li
+      padding-top: 0
+      padding-bottom: 3em
+      padding-left: $timeline-size * 2
+      margin-left: $timeline-size
+      position: relative
+      border-left: $border-width solid $secondary
+      &.unknown
+        border-left-style: dashed
       &:before
-        background: $quadrary
-  .log
-    .time
-      padding: 0 0.5em
-      font-weight: bold
-      color: $secondary - #222
+        border: $border-width solid $secondary
+        background: $secondary
+        border-radius: 50%
+        content: ""
+        display: block
+        position: absolute
+        left: -(($border-width / 2) + ($timeline-size))
+        width: $timeline-size * 2
+        height: $timeline-size * 2
+        box-sizing: border-box
+      &:last-child
+        border-left: none
+        margin-left: $timeline-size + $border-width
+      &:last-child,
+      &.unknown
+        &:before
+          background: $quadrary
+    .log
+      .time
+        padding: 0 0.5em
+        font-weight: bold
+        color: $secondary
