@@ -16,9 +16,6 @@ angular.module('Hitchhikr', [])
         # TODO: Calculate the current percentage
         $scope.percentage = '24%'
       .error (data, status, headers, config) ->
-        # logs = response.data
-        #_.last(logs)
-        # TODO: Calculate the current percentage
         $scope.percentage = 'error'
 
   .controller 'logsStreamCtrl', ($scope, $http) ->
