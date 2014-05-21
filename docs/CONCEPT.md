@@ -20,6 +20,10 @@ Some of the features should be accessable without a login/account. E.g. searchin
 
 [Alpha 1](https://github.com/DerZyklop/hitchhikr/issues?milestone=2) will be an app with a mobile-friendly way to access [data from Hitchwiki Maps](http://hitchwiki.org/maps/api/?place=2245).
 
+[Alpha 2](https://github.com/DerZyklop/hitchhikr/issues?milestone=4) will have the car and location log feature.
+
+[Beta 1](https://github.com/DerZyklop/hitchhikr/issues?milestone=1) will be the one that one really want to use on the streets. Beta 1 will be public but not promoted.
+
 ## Tools
 
 ### API's
