@@ -16,6 +16,10 @@ Solutions:
 
 Some of the features should be accessable without a login/account. E.g. searching for nearby hitchhiker spots.
 
+## Roadmap
+
+[Alpha 1](issues?milestone=2) will be an app with a mobile-friendly way to access [data from Hitchwiki Maps](http://hitchwiki.org/maps/api/?place=2245).
+
 ## Tools
 
 ### API's
