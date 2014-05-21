@@ -1,6 +1,9 @@
-[submodule "wireframe/submodules/kirby"]
-	path = wireframe/submodules/kirby
-	url = https://github.com/getkirby/kirby
-[submodule "wireframe/submodules/sass-boilerplate"]
-	path = wireframe/submodules/sass-boilerplate
-	url = https://github.com/DerZyklop/sass-boilerplate
+[submodule "wireframe/src/assets/sass/sass-boilerplate"]
+  path = wireframe/src/assets/sass/sass-boilerplate
+  url = https://github.com/DerZyklop/sass-boilerplate.git
+[submodule "wireframe/kirby"]
+	path = wireframe/kirby
+	url = https://github.com/getkirby/kirby.git
+[submodule "wireframe/src/kirby"]
+	path = wireframe/src/kirby
+	url = https://github.com/getkirby/kirby.git
