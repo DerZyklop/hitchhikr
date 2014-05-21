@@ -11,8 +11,7 @@ angular.module('Hitchhikr', [])
     $scope.percentage = ''
     $http( url: 'http://hitchhikr.apiary-mock.com/user/1/trip/1/log' )
       .success (data, status, headers, config) ->
-        # logs = response.data
-        #_.last(logs)
+        #_.last(data)
         # TODO: Calculate the current percentage
         $scope.percentage = '24%'
       .error (data, status, headers, config) ->
