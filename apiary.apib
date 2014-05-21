@@ -1,0 +1,155 @@
+FORMAT: 1A
+
+# Hitchhikr
+This is the internal API for https://github.com/DerZyklop/hitchhikr/
+
+# Group User
+
+## Users Collection [/user]
+### List all Users [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 0, "name": "robert", "email": "foo@foo.de"
+        }, {
+          "id": 1, "name": "DerZyklop", "email": "inyo@gmx.de"
+        }]
+
+### Create a User [POST]
++ Request (application/json)
+
+        { "name": "sheldon", "email": "cooper@tbbt.com" }
+
++ Response 201 (application/json)
+
+        { "id": 2, "name": "sheldon", "email": "cooper@tbbt.com" }
+
+## User [/user/{id}]
+A single User object with all its details
+
++ Parameters
+    + id (required, number, `1`) ... Numeric `id` of the User to perform action with. Has example value.
+
+### Retrieve a User [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "name": "sheldon", "email": "cooper@tbbt.com" }
+
+### Remove a User [DELETE]
++ Response 204
+
+
+
+# Group Trip
+
+## Trips Collection [/user/{id}/trip]
+### List all Trips [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 0, "date": "01.01.2014", "start": "Gießen", "target": "Berlin"
+        }, {
+          "id": 1, "date": "05.01.2014", "start": "Berlin", "target": "Gießen"
+        }]
+
+### Create a Trip [POST]
++ Request (application/json)
+
+        { "date": "21.01.2014", "start": "Gießen", "target": "Mannheim" }
+
++ Response 201 (application/json)
+
+        { "id": 2, "date": "21.01.2014", "start": "Gießen", "target": "Mannheim" }
+
+
+## Trip [/user/{user_id}/trip/{trip_id}]
+A single Trip with its logs.
+
+### Retrieve a Trip [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 1, "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
+
+
+### Remove a Trip [DELETE]
++ Response 204
+
+# Group Logs
+
+## Logs Collection [/user/{id}/trip/{trip_id}/log]
+### List all Logs [GET]
++ Response 200 (application/json)
+
+        [{
+          "id": 0, 
+          "date": "21.01.2014", 
+          "time": "11:40:10", 
+          "type": "car", 
+          "location": "Gießen", 
+          "color": "#ff0000", 
+          "gender": "f" 
+        }, {
+          "id": 1, 
+          "date": "21.01.2014", 
+          "time": "12:12:34", 
+          "type": "location", 
+          "location": "Frankfurt am Main", 
+          "color": "", 
+          "gender": "" 
+        }, {
+          "id": 2, 
+          "date": "21.01.2014", 
+          "time": "13:23:52", 
+          "type": "car", 
+          "location": "Darmstadt", 
+          "color": "", 
+          "gender": ""
+        }, {
+          "id": 3, 
+          "date": "21.01.2014", 
+          "time": "15:53:30", 
+          "type": "car", 
+          "location": "Mannheim", 
+          "color": "#ff0000", 
+          "gender": "f" 
+        }]
+
+### Create a Log [POST]
++ Request (application/json)
+
+        { "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
+
++ Response 201 (application/json)
+
+        { "id": 4, "date": "05.01.2014", "start": "Berlin", "target": "Gießen" }
+
+
+## Log [/user/{user_id}/trip/{trip_id}/log/{log_id}]
+A single Log with details.
+
+### Retrieve a Log [GET]
++ Response 200 (application/json)
+
+    + Header
+
+            X-My-Header: The Value
+
+    + Body
+
+            { "id": 2, "type": "car", "location": "Jena", "color": "#ff0000", "gender": "f" }
+
+### Remove a Log [DELETE]
++ Response 204
+

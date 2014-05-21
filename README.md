@@ -6,16 +6,10 @@ Wanna know more? Read the [concept](docs/CONCEPT.md).
 
 ## Getting started
 
-Download repo and install dev environment:
+Download repo recursively
 
 ```
 git clone --recursive https://github.com/DerZyklop/hitchhikr.git
-cd hitchhikr
-npm install
 ```
 
-Start server and watch files:
-
-```
-grunt
-```
+Check the [wireframe](wireframe/).

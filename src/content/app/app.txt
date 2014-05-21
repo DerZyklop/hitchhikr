@@ -1,7 +1,0 @@
-Title: Hitchhikr-App
-----
-Text:
-There is no active trip right now.
-<p>
-  <a class="button" href="/app/addtrip">Add a new trip</a>
-</p>

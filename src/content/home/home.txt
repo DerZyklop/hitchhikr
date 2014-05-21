@@ -1,7 +1,0 @@
-Title: Start
-
-----
-
-Text: Welcome!
-
-Please (link: login text: login).

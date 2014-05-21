@@ -12,6 +12,10 @@ Solutions:
 1. Good access to Hitchwiki Maps database for mobile devices
 2. Possibility to log Hitchhikers activities easily (where they are, which car etc.). Make activities accessable to friends and family.
 
+### Account isn't a must
+
+Some of the features should be accessable without a login/account. E.g. searching for nearby hitchhiker spots.
+
 ## Roadmap
 
 [Alpha 1](issues?milestone=2) will be an app with a mobile-friendly way to access [data from Hitchwiki Maps](http://hitchwiki.org/maps/api/?place=2245).
@@ -22,7 +26,7 @@ Solutions:
 
 We will fetch data from [Hitchwiki Maps](http://hitchwiki.org/maps/).
 
-Internal data will mostly be delivered as json. The exchange to and from Hitchhikr-Server will be done via [CRUD-API](http://en.wikipedia.org/wiki/Create,_read,_update_and_delete).
+And here is a [API blueprint](http://hitchhikr.apiary-mock.com/) for internal data-transfer.
 
 ### Frontend
 
@@ -46,3 +50,5 @@ This could help during the developement:
 ## More
 
 Do you have more ideas about it? [Let us know](https://github.com/DerZyklop/hitchhikr/issues?state=open)! You're welcome to contibute!
+
+Yo!

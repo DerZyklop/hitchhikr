@@ -1,0 +1,220 @@
+@import 'config'
+@import '../../../submodules/sass-boilerplate/mixins/all'
++all
+
+// html
+body
+  font-family: $font-main
+  font-size: $font-size
+
+body, html
+  min-height: 100%
+  margin: 0
+
+h1
+  border-bottom: 1px solid $border-color
+
+a
+  color: $secondary
+
+hr
+  border: none
+  background: $tertiary
+  height: $border-width
+h1, h2, h3, h4, h5, h6,
+hr
+  margin: $space-t-b 0
+
+input
+  box-sizing: border-box
+  [type="text"]
+    width: 100%
+
+footer
+  border-top: 1px solid $border-color
+  font-family: helvetica, arial
+  font-size: 0.8em
+  text-align: right
+
+form
+  img
+    display: block
+    margin: 0 auto
+
+
+$main-header-height: 60px
+
+.main-header,
+.page-wrap,
+.main-nav
+  transition: all 0.3s cubic-bezier(1.000, -0.530, 0.405, 1.425)
+
+.main-header
+  position: fixed
+  z-index: 10
+  background: linear-gradient($secondary + #111, $secondary - #111)
+  height: $main-header-height / 2
+  padding: $main-header-height / 4
+  line-height: $main-header-height / 2
+  text-align: center
+  color: white
+  text-shadow: #222 0px -1px 1px
+  width: 100%
+  left: 0
+  top: 0
+  h1
+    font-size: 1em
+    margin: 0
+    border: 0
+    // TODO: ellipsis is not working
+    overflow: ellipsis
+    white-space: nowrap
+  a
+    text-decoration: none
+    position: absolute
+    top: 0
+    bottom: 0
+    left: 0
+    line-height: $main-header-height / 2
+    right: left
+    color: white
+    float: left
+    padding: $main-header-height / 4 $main-header-height / 2
+    border-right: 1px dotted rgba(255,255,255,0.4)
+
+.page-wrap
+  float: right
+  width: 100%
+  padding: 0
+
+.main-nav
+  position: fixed
+  top: 0
+  width: 0
+  height: 100%
+  background: $tertiary
+  overflow-y: auto
+  color: $quadrary
+  ul
+    // TODO: Needs a better solution for min-width here
+    min-width: 220px
+    padding: 0
+    margin: 0
+    li
+      border-bottom: $border-width dotted rgba(255,255,255,0.2)
+      font-size: 0.8em
+      a
+        display: block
+        padding: 0 $space-l-r
+        line-height: $main-header-height
+        color: $quadrary
+        text-decoration: none
+        &.close-menu
+          color: #f99
+          font-size: 2em
+  &:after
+    content: ""
+    position: absolute
+    top: 0
+    right: 0
+    height: 100%
+    width: 34px
+    background: linear-gradient(left, rgba(black, 0), rgba(black, 0.4))
+
+.close-menu
+  display: none
+.open-menu
+  display: block
+
+$main-nav-percentage: 40
+
+#main-nav
+  &:target
+    width: percentage($main-nav-percentage/100)
+  &:target + .page-wrap
+    width: percentage((100-$main-nav-percentage)/100)
+    //margin-right: -120px
+    .open-menu
+      display: none
+    .close-menu
+      display: block
+    .main-header
+      width: percentage((100-$main-nav-percentage)/100)
+      left: percentage($main-nav-percentage/100)
+
+.main-content
+  padding: 0.7em
+  margin-top: $main-header-height
+
+// snippets
+.progress-bar
+  position: relative
+  display: block
+  background: repeating-linear-gradient( 45deg, $tertiary, $tertiary 10px, $tertiary - #111 10px, $tertiary - #111 20px )
+  text-align: center
+  text-decoration: none
+  color: $quadrary
+  line-height: 50px
+  border-radius: $radius
+  .done,
+  .target-icon
+    position: absolute
+    top: 0
+    bottom: 0
+  .done
+    left: 0
+    background: repeating-linear-gradient( 45deg, $secondary, $secondary 10px, $secondary - #111 10px, $secondary - #111 20px )
+  .target-icon
+    right: 0.5em
+    background: url('../images/iconmonstr-crosshair-9-icon-32-w.png') center center no-repeat
+    width: 32px
+
+$timeline-size: 12px
+
+body
+  background-image: url('../images/grid_noise.png')
+  background-attachment: fixed
+
+.trip-stream
+  background: $tertiary
+  border-radius: $radius
+  color: $quadrary
+  padding: $space-l-r
+  margin: $space-l-r 0
+  hr
+    background: $quadrary
+  ul
+    display: block
+    padding: $space-t-b 0 0
+    margin: $space-l-r 0 0
+    list-style: none
+    li
+      padding-top: 0
+      padding-bottom: 3em
+      padding-left: $timeline-size * 2
+      margin-left: $timeline-size
+      position: relative
+      border-left: $border-width solid $secondary
+      &.unknown
+        border-left-style: dashed
+      &:before
+        border: $border-width solid $secondary
+        background: $secondary
+        border-radius: 50%
+        content: ""
+        display: block
+        position: absolute
+        left: -(($border-width / 2) + ($timeline-size))
+        width: $timeline-size * 2
+        height: $timeline-size * 2
+        box-sizing: border-box
+      &:last-child
+        border-left: none
+        margin-left: $timeline-size + $border-width
+        &:before
+          background: $quadrary
+    .log
+      .time
+        padding: 0 0.5em
+        font-weight: bold
+        color: $secondary

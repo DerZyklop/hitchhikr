@@ -1,0 +1,13 @@
+Title: Target
+----
+Text:
+<form action="/trips/trip">
+  <p>
+    <img src="/assets/images/iconmonstr-navigation-10-icon-256.png" height="180px" alt=""><br>
+    <label for="target">Your target</label><br>
+    <input type="text" name="target">
+  </p>
+  <p>
+    <input type="submit" value="Next">
+  </p>
+</form>
