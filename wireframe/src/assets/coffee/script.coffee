@@ -22,3 +22,7 @@ angular.module('Hitchhikr', [])
       $scope.logs = response.data
     $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1').then (response) ->
       $scope.trip = response.data
+
+  .controller 'nearbySpotsCtrl', ($scope, $http) ->
+    $http.get('http://hitchwikimaps.apiary-mock.com/maps/api/?place=2245').then (response) ->
+      $scope.data = response.data

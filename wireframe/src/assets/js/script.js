@@ -25,6 +25,10 @@
     return $http.get('http://hitchhikr.apiary-mock.com/user/1/trip/1').then(function(response) {
       return $scope.trip = response.data;
     });
+  }).controller('nearbySpotsCtrl', function($scope, $http) {
+    return $http.get('http://hitchwikimaps.apiary-mock.com/maps/api/?place=2245').then(function(response) {
+      return $scope.data = response.data;
+    });
   });
 
 }).call(this);
