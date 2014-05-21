@@ -18,7 +18,7 @@ Some of the features should be accessable without a login/account. E.g. searchin
 
 ## Roadmap
 
-[Alpha 1](issues?milestone=2) will be an app with a mobile-friendly way to access [data from Hitchwiki Maps](http://hitchwiki.org/maps/api/?place=2245).
+[Alpha 1](https://github.com/DerZyklop/hitchhikr/issues?milestone=2) will be an app with a mobile-friendly way to access [data from Hitchwiki Maps](http://hitchwiki.org/maps/api/?place=2245).
 
 ## Tools
 
