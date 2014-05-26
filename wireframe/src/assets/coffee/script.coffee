@@ -24,5 +24,28 @@ angular.module('Hitchhikr', [])
       $scope.trip = response.data
 
   .controller 'nearbySpotsCtrl', ($scope, $http) ->
+
+    distance = (lat1, lng1, lat2, lng2) ->
+      radial = (num) ->
+        num * Math.PI / 180
+      R = 6371
+      dLat = radial(lat2-lat1)
+      dLon = radial(lng2-lng1)
+      a = Math.sin(dLat/2) * Math.sin(dLat/2) + Math.cos(radial(lat1)) * Math.cos(radial(lat2)) * Math.sin(dLon/2) * Math.sin(dLon/2)
+      c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1-a))
+      return R * c
+
+    # This is the spot in Reiskirchen
     $http.get('http://hitchwikimaps.apiary-mock.com/maps/api/?place=2245').then (response) ->
-      $scope.data = response.data
+      $scope.place = response.data
+
+    # These are all spots from Germany
+    navigator.geolocation.getCurrentPosition (position) ->
+      $http.get('https://hitchwikimaps.apiary.io/maps/api/?country=DE').then (response) ->
+        $scope.nearest = distance(response.data[0].lat, response.data[0].lon, position.coords.latitude, position.coords.longitude)
+
+      $http.get('http://hitchwikimaps.apiary-mock.com/maps/api/?place=2245').then (response) ->
+        $scope.place.distance = distance(response.data.lat, response.data.lon, position.coords.latitude, position.coords.longitude)
+
+
+      #$scope.country = distance()
