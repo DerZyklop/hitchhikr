@@ -36,11 +36,11 @@ module.exports = (grunt) ->
         ]
         dest: '<%= paths.build.js %>script.js'
 
-    # eslint
-    eslint:
-      options:
-        config: 'eslint.json'
-      all: ['<%= paths.src.js %>*.js']
+    # # eslint
+    # eslint:
+    #   options:
+    #     config: 'eslint.json'
+    #   all: ['<%= paths.src.js %>*.js']
 
     # sass
     sass:
@@ -94,7 +94,7 @@ module.exports = (grunt) ->
       # watch coffee
       coffee:
         files: ['<%= paths.src.coffee %>*.coffee']
-        tasks: ['newer:coffee', 'newer:eslint', 'concat']
+        tasks: ['newer:coffee', 'concat']
         options:
           livereload: true
       # watch sass
@@ -159,6 +159,6 @@ module.exports = (grunt) ->
 
 
   # Default task(s)
-  grunt.registerTask('scripts', ['coffee', 'eslint', 'concat'])
+  grunt.registerTask('scripts', ['coffee', 'concat'])
   grunt.registerTask('styles', ['sass', 'autoprefixer', 'imageEmbed', 'cssmin'])
   grunt.registerTask('default', ['scripts', 'styles', 'copy', 'concurrent'])
