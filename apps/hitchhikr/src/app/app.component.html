@@ -1,8 +1,17 @@
 <div style="text-align: center">
-  <h1>Welcome to hitchhikr!</h1>
-  <img
+  <!-- <h1>Welcome to hitchhikr!</h1> -->
+  <!-- <img
     width="450"
     src="https://raw.githubusercontent.com/nrwl/nx/master/images/nx-logo.png"
-  />
+  /> -->
 </div>
-<div>Message: {{ hello$ | async | json }}</div>
+<!-- <div>Message: {{ hello$ | async | json }}</div>
+<div>goodbye: {{ goodbye$ | async | json }}</div> -->
+<div *ngFor="let cat of (cats$ | async)" style="border:1px solid #ccc; background-color: #f5f5f5; padding: 1em; border-radius: 4px; margin-bottom: 1em;">
+  <h3 style="margin-top:0">{{cat.name}}</h3>
+  <div>{{cat.id}}</div>
+  <button (click)="removeCat(cat.id)">Remove</button>
+</div>
+<button (click)="addCat()">Add</button>
+<!-- <pre>{{ cats$ | async | json }}</pre> -->
+
