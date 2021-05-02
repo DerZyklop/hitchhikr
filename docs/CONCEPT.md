@@ -1,5 +1,6 @@
-# Concept
+// TODO: Update this Concept. Right now its 7 years old. LOL.
 
+# Concept
 ## Basics
 
 Problems to solve:
