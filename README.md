@@ -14,7 +14,8 @@ Download repo recursively
 git clone --recursive https://github.com/DerZyklop/hitchhikr.git
 cd hitchhikr
 npm install
-npm start
+nx serve
+nx serve api
 ```
 
 Check the [wireframe](wireframe/).
