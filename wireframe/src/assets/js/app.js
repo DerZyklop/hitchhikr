@@ -42,8 +42,26 @@
       $scope.current.lng = position.coords.longitude;
       $scope.current.lat = position.coords.latitude;
       $scope.current.latlng = position.coords.latitude + ',' + position.coords.longitude;
-      return $http.get('http://maps.googleapis.com/maps/api/geocode/json?latlng=' + $scope.current.latlng + '&sensor=true').then(function(response) {
-        return $scope.current.formattedAddress = response.data.results[1].formatted_address;
+      return $http.get('https://maps.googleapis.com/maps/api/geocode/json?key=AIzaSyDWSfOAUSM1YDtKCe8rTcLT39U8tYfhIDk&latlng=' + $scope.current.latlng + '&sensor=true').then(function(response) {
+        var _ref;
+        if (!response.data.results.length) {
+          console.error('NO RESULTS!!');
+        }
+        return $scope.current.formattedAddress = (_ref = response.data.results[1]) != null ? _ref.formatted_address : void 0;
+      }).then(function() {
+        return $http.get('http://private-anon-c57b0068f2-hitchwikimaps.apiary-mock.com/maps/api/?country=DE').then(function(response) {
+          var place;
+          console.log(response.data);
+          place = response.data[0];
+          return $http.get('http://private-anon-c57b0068f2-hitchwikimaps.apiary-mock.com/maps/api/?place=' + place.id).then(function(response) {
+            var distanceOfPlace;
+            console.log(response);
+            distanceOfPlace = distance(response.data[0].lat, response.data[0].lon, position.coords.latitude, position.coords.longitude);
+            $scope.nearest = distanceOfPlace;
+            $scope.place = response.data;
+            return $scope.place.distance = distance(response.data.lat, response.data.lon, position.coords.latitude, position.coords.longitude);
+          });
+        });
       });
     });
   });

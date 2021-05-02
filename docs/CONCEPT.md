@@ -30,7 +30,7 @@ Some of the features should be accessable without a login/account. E.g. searchin
 
 We will fetch data from [Hitchwiki Maps](http://hitchwiki.org/maps/).
 
-And here is a [API blueprint](http://hitchhikr.apiary-mock.com/) for internal data-transfer.
+And here is a [API](https://hitchwikimaps.docs.apiary.io/) for it.
 
 ### Frontend
 

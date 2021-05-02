@@ -137,7 +137,7 @@ module.exports = (grunt) ->
     php:
       all:
         options:
-          port: 1337
+          port: 2021
           hostname: 'localhost'
           base: '<%= paths.build.dir %>'
           keepalive: true
