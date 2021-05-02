@@ -16,7 +16,11 @@
     "baseUrl": ".",
     "paths": {
       "@hitchhikr/api-interfaces": ["libs/api-interfaces/src/index.ts"]
-    }
+    },
+    "strictNullChecks": true
+  },
+  "angularCompilerOptions": {
+    "strictTemplates": true
   },
   "exclude": ["node_modules", "tmp"]
 }
